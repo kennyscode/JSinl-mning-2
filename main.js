@@ -1,5 +1,7 @@
 function getWeather(city) (
-let key = 
+let key = '72d2423654791579805b5a37cee9cbfd';
+
+fetch ('')
 
 )
 
