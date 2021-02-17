@@ -1,3 +1,14 @@
+function getWeather(city) (
+let key = 
+
+)
+
+
+
+
+
+
+
 
 //
 function getWeather(city) {
@@ -16,7 +27,13 @@ function getWeather(city) {
 }
 
 //
-function getAttractionUrl(city) {
+function getAttraction(city) {
+fetch 
+
+
+
+
+
   const attractionUrl = new URL('https://api.foursquare.com/v2/venues/explore');
   const clientID = "NR1JWNHEVYIMWD4UAZMT5DFLV0KQZBSZM1JZMEOKMAUATZM3";
   const clientSecret = "3JTEDSX1HKALV55RBV2TBOYJB4LUBT01W23AOZPQYLZ5BF1D";
