@@ -1,4 +1,4 @@
-// Openweather API-call//
+// Openweather API-call
 function getWeather(city) {
   let key = '72d2423654791579805b5a37cee9cbfd';
   var wacttractionBox = document.getElementsByClassName("AttractionBox");
