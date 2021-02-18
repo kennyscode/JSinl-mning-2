@@ -17,3 +17,40 @@ header{
     margin: auto;
     padding: 5%;
 }
+
+#WeatherBox {
+    padding: 25px;
+    background: lightsteelblue;
+    box-shadow: 5px 10px 8px black;
+    display: block;
+    width: 20%;
+
+    margin: 0.5in auto;
+    
+    max-width: 4in;
+    min-width: 3in;
+    max-height: 4in;
+
+    color: blanchedalmond;
+    font-size: 10px;
+    border-radius: 30px;
+  }
+
+  .AttractionBox {
+    padding: 30px;
+    display: inline;
+    justify-content: auto;
+    float: left;
+    background: lightsteelblue;
+    box-shadow: 5px 10px 8px black;
+
+    margin: 2em;
+    
+    max-width: 4in;
+    min-width: 3in;
+    max-height: 4in;
+    
+    color: blanchedalmond;
+    font-size: 10px;
+    border-radius: 30px;
+  }
