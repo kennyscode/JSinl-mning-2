@@ -1,4 +1,4 @@
-// openweather API-call//
+// Openweather API-call//
 function getWeather(city) {
   let key = '72d2423654791579805b5a37cee9cbfd';
   var wacttractionBox = document.getElementsByClassName("AttractionBox");
@@ -13,7 +13,7 @@ function getWeather(city) {
   if (typeof(weatherbox) != 'undefined' && weatherbox != null) {
       weatherbox.remove();
   }
- // hämtar API data från openweatermap
+ // Hämtar API data från openweatermap och kollar ifall den returnar korrekt respons, om den ej gör det ska den returnera error meddelande. Även checkboxerna kontrolleras och vad som då ska visas när de väljs.
   fetch('https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=' + key + '')
       .then(function(response) {
           if (response.ok) {
@@ -23,11 +23,10 @@ function getWeather(city) {
           } else if (response.status === 500) {
               alert("ERROR. PLEASE ENTER VALID INPUT.")
           } else {
-              alert("Try again.")
+              alert("ERROR. TRY AGAIN.")
           }
       })
 
-      
       .then(function(weather) {
         if (document.getElementById("onlyWeather").checked && (document.getElementById("onlyAttractions").checked)) {
             displayWeather(weather)
@@ -49,7 +48,7 @@ function getWeather(city) {
       
 }
 
-// ser till att det blir till rätt temperatursmått 
+// Ser till att det blir till rätt temperatursmått
 function getCelsius(kelvin) {
     var fTemp = kelvin;
     var fToC = (fTemp - 273);
@@ -86,7 +85,7 @@ function displayAttractions(attractions) {
 }
 
 
-// FORSQUARE CLIENT AND TOP ATTRACTIONS
+// FORSQUARE CLIENT AND TOP ATTRACTIONS, getAttraction API från Foursquare
 function getAttraction(city) {
   fetch('https://api.foursquare.com/v2/venues/explore?client_id=' + 'NR1JWNHEVYIMWD4UAZMT5DFLV0KQZBSZM1JZMEOKMAUATZM3' + '&client_secret=' + '3JTEDSX1HKALV55RBV2TBOYJB4LUBT01W23AOZPQYLZ5BF1D' + '&near=' + city + '&limit=10&v=20210211')
       .then(function(response) {
@@ -106,7 +105,7 @@ function getAttraction(city) {
 
 
 
-// DISPLAY WEATHER
+// DISPLAY WEATHER, kontrollerar om det redan finns en befintlig weatherbox, och tar bort om det redan finns det
 function displayWeather(weather) {
   var weatherbox = document.getElementById("WeatherBox")
   if (typeof(weatherbox) != 'undefined' && weatherbox != null) {
